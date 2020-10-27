@@ -1,0 +1,452 @@
+Script started on 2019-04-20 18:41:57-0400
+[4miris[24m:[1m~/CS315/assignment5[0m> make
+g++ -c project5.cpp -o project5.o
+g++ -c markovRule.cpp -o markovRule.o
+g++ project5.o markovRule.o -o project5
+[4miris[24m:[1m~/CS315/assignment5[0m> ./project5
+Input file: data.markov.txt
+
+Num     Left     Right     NextRule
+0            [ABBBAABA            1
+1       [AA        A[A            1
+2       [AB        B[A            1
+3       [BA        A[B            1
+4       [BB        B[B            1
+5         [         [:            6
+6        A[         [A            6
+7        B[         [B            6
+8        [:                      10
+9         [          [            1
+10        :                      10
+Rule       Mainstring (after the rule)
+0           [ABBBAABA
+1           [ABBBAABA
+2           B[ABBAABA
+1           B[ABBAABA
+2           BB[ABAABA
+1           BB[ABAABA
+2           BBB[AAABA
+1           BBBA[AABA
+1           BBBAA[ABA
+1           BBBAA[ABA
+2           BBBAAB[AA
+1           BBBAABA[A
+1           BBBAABA[A
+2           BBBAABA[A
+3           BBBAABA[A
+4           BBBAABA[A
+5          BBBAABA[:A
+6          BBBAAB[A:A
+6          BBBAAB[A:A
+7          BBBAA[BA:A
+6          BBBA[ABA:A
+6          BBB[AABA:A
+6          BBB[AABA:A
+7          BB[BAABA:A
+6          BB[BAABA:A
+7          B[BBAABA:A
+6          B[BBAABA:A
+7          [BBBAABA:A
+6          [BBBAABA:A
+7          [BBBAABA:A
+8          [BBBAABA:A
+9          [BBBAABA:A
+1          [BBBAABA:A
+2          [BBBAABA:A
+3          [BBBAABA:A
+4          B[BBAABA:A
+1          B[BBAABA:A
+2          B[BBAABA:A
+3          B[BBAABA:A
+4          BB[BAABA:A
+1          BB[BAABA:A
+2          BB[BAABA:A
+3          BBA[BABA:A
+1          BBA[BABA:A
+2          BBA[BABA:A
+3          BBAA[BBA:A
+1          BBAA[BBA:A
+2          BBAA[BBA:A
+3          BBAA[BBA:A
+4          BBAAB[BA:A
+1          BBAAB[BA:A
+2          BBAAB[BA:A
+3          BBAABA[B:A
+1          BBAABA[B:A
+2          BBAABA[B:A
+3          BBAABA[B:A
+4          BBAABA[B:A
+5         BBAABA[:B:A
+6         BBAAB[A:B:A
+6         BBAAB[A:B:A
+7         BBAA[BA:B:A
+6         BBA[ABA:B:A
+6         BB[AABA:B:A
+6         BB[AABA:B:A
+7         B[BAABA:B:A
+6         B[BAABA:B:A
+7         [BBAABA:B:A
+6         [BBAABA:B:A
+7         [BBAABA:B:A
+8         [BBAABA:B:A
+9         [BBAABA:B:A
+1         [BBAABA:B:A
+2         [BBAABA:B:A
+3         [BBAABA:B:A
+4         B[BAABA:B:A
+1         B[BAABA:B:A
+2         B[BAABA:B:A
+3         BA[BABA:B:A
+1         BA[BABA:B:A
+2         BA[BABA:B:A
+3         BAA[BBA:B:A
+1         BAA[BBA:B:A
+2         BAA[BBA:B:A
+3         BAA[BBA:B:A
+4         BAAB[BA:B:A
+1         BAAB[BA:B:A
+2         BAAB[BA:B:A
+3         BAABA[B:B:A
+1         BAABA[B:B:A
+2         BAABA[B:B:A
+3         BAABA[B:B:A
+4         BAABA[B:B:A
+5        BAABA[:B:B:A
+6        BAAB[A:B:B:A
+6        BAAB[A:B:B:A
+7        BAA[BA:B:B:A
+6        BA[ABA:B:B:A
+6        B[AABA:B:B:A
+6        B[AABA:B:B:A
+7        [BAABA:B:B:A
+6        [BAABA:B:B:A
+7        [BAABA:B:B:A
+8        [BAABA:B:B:A
+9        [BAABA:B:B:A
+1        [BAABA:B:B:A
+2        [BAABA:B:B:A
+3        A[BABA:B:B:A
+1        A[BABA:B:B:A
+2        A[BABA:B:B:A
+3        AA[BBA:B:B:A
+1        AA[BBA:B:B:A
+2        AA[BBA:B:B:A
+3        AA[BBA:B:B:A
+4        AAB[BA:B:B:A
+1        AAB[BA:B:B:A
+2        AAB[BA:B:B:A
+3        AABA[B:B:B:A
+1        AABA[B:B:B:A
+2        AABA[B:B:B:A
+3        AABA[B:B:B:A
+4        AABA[B:B:B:A
+5       AABA[:B:B:B:A
+6       AAB[A:B:B:B:A
+6       AAB[A:B:B:B:A
+7       AA[BA:B:B:B:A
+6       A[ABA:B:B:B:A
+6       [AABA:B:B:B:A
+6       [AABA:B:B:B:A
+7       [AABA:B:B:B:A
+8       [AABA:B:B:B:A
+9       [AABA:B:B:B:A
+1       A[ABA:B:B:B:A
+1       A[ABA:B:B:B:A
+2       AB[AA:B:B:B:A
+1       ABA[A:B:B:B:A
+1       ABA[A:B:B:B:A
+2       ABA[A:B:B:B:A
+3       ABA[A:B:B:B:A
+4       ABA[A:B:B:B:A
+5      ABA[:A:B:B:B:A
+6      AB[A:A:B:B:B:A
+6      AB[A:A:B:B:B:A
+7      A[BA:A:B:B:B:A
+6      [ABA:A:B:B:B:A
+6      [ABA:A:B:B:B:A
+7      [ABA:A:B:B:B:A
+8      [ABA:A:B:B:B:A
+9      [ABA:A:B:B:B:A
+1      [ABA:A:B:B:B:A
+2      B[AA:A:B:B:B:A
+1      BA[A:A:B:B:B:A
+1      BA[A:A:B:B:B:A
+2      BA[A:A:B:B:B:A
+3      BA[A:A:B:B:B:A
+4      BA[A:A:B:B:B:A
+5     BA[:A:A:B:B:B:A
+6     B[A:A:A:B:B:B:A
+6     B[A:A:A:B:B:B:A
+7     [BA:A:A:B:B:B:A
+6     [BA:A:A:B:B:B:A
+7     [BA:A:A:B:B:B:A
+8     [BA:A:A:B:B:B:A
+9     [BA:A:A:B:B:B:A
+1     [BA:A:A:B:B:B:A
+2     [BA:A:A:B:B:B:A
+3     A[B:A:A:B:B:B:A
+1     A[B:A:A:B:B:B:A
+2     A[B:A:A:B:B:B:A
+3     A[B:A:A:B:B:B:A
+4     A[B:A:A:B:B:B:A
+5    A[:B:A:A:B:B:B:A
+6    [A:B:A:A:B:B:B:A
+6    [A:B:A:A:B:B:B:A
+7    [A:B:A:A:B:B:B:A
+8    [A:B:A:A:B:B:B:A
+9    [A:B:A:A:B:B:B:A
+1    [A:B:A:A:B:B:B:A
+2    [A:B:A:A:B:B:B:A
+3    [A:B:A:A:B:B:B:A
+4    [A:B:A:A:B:B:B:A
+5   [:A:B:A:A:B:B:B:A
+6   [:A:B:A:A:B:B:B:A
+7   [:A:B:A:A:B:B:B:A
+8    A:B:A:A:B:B:B:A
+10     AB:A:A:B:B:B:A
+10      ABA:A:B:B:B:A
+10       ABAA:B:B:B:A
+10        ABAAB:B:B:A
+10         ABAABB:B:A
+10          ABAABBB:A
+10           ABAABBBA
+10           ABAABBBA
+[4miris[24m:[1m~/CS315/assignment5[0m> ./project5
+Input file: test.data.txt
+
+Num     Left     Right     NextRule
+0                 ABCD            1
+1      ABCD        BCD            2
+2       BCD         CD            3
+3        CD          D            4
+4         D          Z            5
+5         Z                       5
+Rule       Mainstring (after the rule)
+0                ABCD
+1                 BCD
+2                  CD
+3                   D
+4                   Z
+5                    
+5                    
+[4miris[24m:[1m~/CS315/assignment5[0m> make ce[Klean
+rm -i `find ./ -type f -executable`
+rm: remove regular file './project5'? n
+rm -i *.o
+rm: remove regular file 'markovRule.o'? y
+rm: remove regular file 'project5.o'? y
+[4miris[24m:[1m~/CS315/assignment5[0m> make run
+g++ -c project5.cpp -o project5.o
+g++ -c markovRule.cpp -o markovRule.o
+g++ project5.o markovRule.o -o project5
+./project5
+Input file: data.markov.txt
+
+Num     Left     Right     NextRule
+0            [ABBBAABA            1
+1       [AA        A[A            1
+2       [AB        B[A            1
+3       [BA        A[B            1
+4       [BB        B[B            1
+5         [         [:            6
+6        A[         [A            6
+7        B[         [B            6
+8        [:                      10
+9         [          [            1
+10        :                      10
+Rule       Mainstring (after the rule)
+0           [ABBBAABA
+1           [ABBBAABA
+2           B[ABBAABA
+1           B[ABBAABA
+2           BB[ABAABA
+1           BB[ABAABA
+2           BBB[AAABA
+1           BBBA[AABA
+1           BBBAA[ABA
+1           BBBAA[ABA
+2           BBBAAB[AA
+1           BBBAABA[A
+1           BBBAABA[A
+2           BBBAABA[A
+3           BBBAABA[A
+4           BBBAABA[A
+5          BBBAABA[:A
+6          BBBAAB[A:A
+6          BBBAAB[A:A
+7          BBBAA[BA:A
+6          BBBA[ABA:A
+6          BBB[AABA:A
+6          BBB[AABA:A
+7          BB[BAABA:A
+6          BB[BAABA:A
+7          B[BBAABA:A
+6          B[BBAABA:A
+7          [BBBAABA:A
+6          [BBBAABA:A
+7          [BBBAABA:A
+8          [BBBAABA:A
+9          [BBBAABA:A
+1          [BBBAABA:A
+2          [BBBAABA:A
+3          [BBBAABA:A
+4          B[BBAABA:A
+1          B[BBAABA:A
+2          B[BBAABA:A
+3          B[BBAABA:A
+4          BB[BAABA:A
+1          BB[BAABA:A
+2          BB[BAABA:A
+3          BBA[BABA:A
+1          BBA[BABA:A
+2          BBA[BABA:A
+3          BBAA[BBA:A
+1          BBAA[BBA:A
+2          BBAA[BBA:A
+3          BBAA[BBA:A
+4          BBAAB[BA:A
+1          BBAAB[BA:A
+2          BBAAB[BA:A
+3          BBAABA[B:A
+1          BBAABA[B:A
+2          BBAABA[B:A
+3          BBAABA[B:A
+4          BBAABA[B:A
+5         BBAABA[:B:A
+6         BBAAB[A:B:A
+6         BBAAB[A:B:A
+7         BBAA[BA:B:A
+6         BBA[ABA:B:A
+6         BB[AABA:B:A
+6         BB[AABA:B:A
+7         B[BAABA:B:A
+6         B[BAABA:B:A
+7         [BBAABA:B:A
+6         [BBAABA:B:A
+7         [BBAABA:B:A
+8         [BBAABA:B:A
+9         [BBAABA:B:A
+1         [BBAABA:B:A
+2         [BBAABA:B:A
+3         [BBAABA:B:A
+4         B[BAABA:B:A
+1         B[BAABA:B:A
+2         B[BAABA:B:A
+3         BA[BABA:B:A
+1         BA[BABA:B:A
+2         BA[BABA:B:A
+3         BAA[BBA:B:A
+1         BAA[BBA:B:A
+2         BAA[BBA:B:A
+3         BAA[BBA:B:A
+4         BAAB[BA:B:A
+1         BAAB[BA:B:A
+2         BAAB[BA:B:A
+3         BAABA[B:B:A
+1         BAABA[B:B:A
+2         BAABA[B:B:A
+3         BAABA[B:B:A
+4         BAABA[B:B:A
+5        BAABA[:B:B:A
+6        BAAB[A:B:B:A
+6        BAAB[A:B:B:A
+7        BAA[BA:B:B:A
+6        BA[ABA:B:B:A
+6        B[AABA:B:B:A
+6        B[AABA:B:B:A
+7        [BAABA:B:B:A
+6        [BAABA:B:B:A
+7        [BAABA:B:B:A
+8        [BAABA:B:B:A
+9        [BAABA:B:B:A
+1        [BAABA:B:B:A
+2        [BAABA:B:B:A
+3        A[BABA:B:B:A
+1        A[BABA:B:B:A
+2        A[BABA:B:B:A
+3        AA[BBA:B:B:A
+1        AA[BBA:B:B:A
+2        AA[BBA:B:B:A
+3        AA[BBA:B:B:A
+4        AAB[BA:B:B:A
+1        AAB[BA:B:B:A
+2        AAB[BA:B:B:A
+3        AABA[B:B:B:A
+1        AABA[B:B:B:A
+2        AABA[B:B:B:A
+3        AABA[B:B:B:A
+4        AABA[B:B:B:A
+5       AABA[:B:B:B:A
+6       AAB[A:B:B:B:A
+6       AAB[A:B:B:B:A
+7       AA[BA:B:B:B:A
+6       A[ABA:B:B:B:A
+6       [AABA:B:B:B:A
+6       [AABA:B:B:B:A
+7       [AABA:B:B:B:A
+8       [AABA:B:B:B:A
+9       [AABA:B:B:B:A
+1       A[ABA:B:B:B:A
+1       A[ABA:B:B:B:A
+2       AB[AA:B:B:B:A
+1       ABA[A:B:B:B:A
+1       ABA[A:B:B:B:A
+2       ABA[A:B:B:B:A
+3       ABA[A:B:B:B:A
+4       ABA[A:B:B:B:A
+5      ABA[:A:B:B:B:A
+6      AB[A:A:B:B:B:A
+6      AB[A:A:B:B:B:A
+7      A[BA:A:B:B:B:A
+6      [ABA:A:B:B:B:A
+6      [ABA:A:B:B:B:A
+7      [ABA:A:B:B:B:A
+8      [ABA:A:B:B:B:A
+9      [ABA:A:B:B:B:A
+1      [ABA:A:B:B:B:A
+2      B[AA:A:B:B:B:A
+1      BA[A:A:B:B:B:A
+1      BA[A:A:B:B:B:A
+2      BA[A:A:B:B:B:A
+3      BA[A:A:B:B:B:A
+4      BA[A:A:B:B:B:A
+5     BA[:A:A:B:B:B:A
+6     B[A:A:A:B:B:B:A
+6     B[A:A:A:B:B:B:A
+7     [BA:A:A:B:B:B:A
+6     [BA:A:A:B:B:B:A
+7     [BA:A:A:B:B:B:A
+8     [BA:A:A:B:B:B:A
+9     [BA:A:A:B:B:B:A
+1     [BA:A:A:B:B:B:A
+2     [BA:A:A:B:B:B:A
+3     A[B:A:A:B:B:B:A
+1     A[B:A:A:B:B:B:A
+2     A[B:A:A:B:B:B:A
+3     A[B:A:A:B:B:B:A
+4     A[B:A:A:B:B:B:A
+5    A[:B:A:A:B:B:B:A
+6    [A:B:A:A:B:B:B:A
+6    [A:B:A:A:B:B:B:A
+7    [A:B:A:A:B:B:B:A
+8    [A:B:A:A:B:B:B:A
+9    [A:B:A:A:B:B:B:A
+1    [A:B:A:A:B:B:B:A
+2    [A:B:A:A:B:B:B:A
+3    [A:B:A:A:B:B:B:A
+4    [A:B:A:A:B:B:B:A
+5   [:A:B:A:A:B:B:B:A
+6   [:A:B:A:A:B:B:B:A
+7   [:A:B:A:A:B:B:B:A
+8    A:B:A:A:B:B:B:A
+10     AB:A:A:B:B:B:A
+10      ABA:A:B:B:B:A
+10       ABAA:B:B:B:A
+10        ABAAB:B:B:A
+10         ABAABB:B:A
+10          ABAABBB:A
+10           ABAABBBA
+10           ABAABBBA
+[4miris[24m:[1m~/CS315/assignment5[0m> ^Dexit
+
+Script done on 2019-04-20 18:42:46-0400
